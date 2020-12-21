@@ -209,7 +209,22 @@
     #endif
 
   #else
-    #error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the BIGTREE_SKR_MINI_E3."
+    /*
+    !!!!!!!!!! HEADER IS SOLDERED BACKWARDS !!!!!!!!!!!
+    !!!!!!!!!!    ACTUAL CONNECTION SHOWN   !!!!!!!!!!!
+         5V | · · | GND
+        SDA | · · | A3
+         A1 | · ·   RX1 (BTN_EN2)
+      RESET | · · | TX1 (BTN_EN1)
+        SCK | · ·*| A4  (BTN_SW)
+*/
+    #define LCD_SCREEN_ROT_180
+    #define BTN_EN1        PA9
+    #define BTN_EN2        PA10
+    #define BTN_ENC        PB5
+    #define SOL1_PIN       PA1
+  
+    //#error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the BIGTREE_SKR_MINI_E3."
   #endif
 
 #endif // HAS_WIRED_LCD
