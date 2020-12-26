@@ -1,3 +1,12 @@
+# Marlin 3D Printer Firmware for TinyBoy2
+
+Configuration:  
+- SKR mini e3  
+- DC42 IR Sensor (Automatic Bed Levelling)
+- ESP3D
+- Self Etched RGB LED Strip
+- Trinamic TMC2209
+
 # BIGTREETECH SKR Mini E3 V1.x and V2.x
 
 BIGTREETECH SKR Mini E3 V1.x and V2.x mainboards are ultra-quiet, low-power, high-quality 3D printing machine controller boards from BIQU.
